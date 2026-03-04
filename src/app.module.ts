@@ -6,7 +6,6 @@ import { envSchema } from "./env";
 import { AuthModule } from "./auth/auth.module";
 import { AuthenticateController } from "./controllers/authenticate.controller";
 import { CreateQuestionController } from "./controllers/create-question.controller";
-import { JwtStrategy } from "./auth/jwt.strategy";
 import { FetchRecentQuestionsController } from "./controllers/fetch-recent-questions.controller";
 
 @Module({
@@ -23,6 +22,6 @@ import { FetchRecentQuestionsController } from "./controllers/fetch-recent-quest
     CreateQuestionController,
     FetchRecentQuestionsController,
   ],
-  providers: [PrismaService, JwtStrategy],
+  providers: [PrismaService],
 })
 export class AppModule {}
